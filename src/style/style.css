@@ -1,0 +1,584 @@
+:root {
+  --background: #ffeaf3;
+  --container-background: #ffff;
+  --text-color: #949494;
+  --text-active-color: #3f3f3f;
+  --main-container-background: #fcfcfd;
+  --writing-section-background: #132051;
+  --cards-section-background: #fce2ed;
+  --speaking-section-background: #d6eef6;
+  --title-text-color: #1f2b59;
+  --disabled-daily-background: #e6e6e6;
+  --complated-lesson-background: #1955af;
+  --sidebar-background: #ffff;
+  --tag-text-color: #3e4561;
+  --container-background-color: #fcfcfd;
+  --daily-icons-border-color: #c2c2c2a1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--background);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 90vh;
+  background: var(--container-background);
+  border-radius: 35px;
+  overflow: hidden;
+  background-color: var(--container-background-color);
+}
+
+.container .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 180px;
+  height: 100%;
+  background: var(--sidebar-background);
+}
+
+.container .sidebar div + div {
+  margin-top: 10px;
+}
+
+.container .sidebar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #132051;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 45px;
+  left: -40px;
+  cursor: pointer;
+}
+
+.container .sidebar .logo .second-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--background);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container .sidebar .logo .second-view .sun {
+  position: relative;
+  width: 135px;
+  height: 15px;
+  background: var(--complated-lesson-background);
+  border-radius: 50%;
+  top: 8px;
+}
+
+.container .sidebar .menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40%;
+}
+
+.container .sidebar .menu-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-left: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.container .sidebar .menu-section ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.container .sidebar .menu-section ul li span:nth-child(2) {
+  padding-left: 10px;
+}
+
+.container .sidebar .menu-section ul li:hover {
+  color: var(--text-active-color);
+}
+
+.container .sidebar .menu-section ul li.active {
+  color: black;
+}
+
+.container .sidebar .pro-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 130px;
+  height: 140px;
+  border: 2px solid #e4e5e6;
+  border-radius: 10px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.container .sidebar .pro-section .texts {
+  text-align: center;
+  padding-bottom: 18px;
+}
+
+.container .sidebar .pro-section span {
+  position: absolute;
+  -webkit-transform: scale(5) rotate(5deg);
+          transform: scale(5) rotate(5deg);
+  color: #d6eef6;
+  left: 35%;
+}
+
+.content-container {
+  margin-left: 25px;
+  padding: 35px;
+}
+
+.content-container .main-title h1 {
+  font-weight: 900;
+  color: var(--title-text-color);
+}
+
+.content-container .main-title p {
+  font-weight: 400;
+  padding-top: 15px;
+  color: #424242;
+}
+
+.content-container .course-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 465px;
+  margin-top: 40px;
+}
+
+.content-container .course-cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  width: 220px;
+  height: 145px;
+  border-radius: 25px;
+  background-color: #ffff;
+  -webkit-box-shadow: 4px 4px 9px 4px rgba(8, 32, 119, 0.185);
+          box-shadow: 4px 4px 9px 4px rgba(8, 32, 119, 0.185);
+}
+
+.content-container .course-cards .card .head-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-container .course-cards .card .card-navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+  width: 25px;
+  height: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.content-container .course-cards .card:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-container .course-cards .card:nth-child(2) .card-navigator span {
+  color: var(--title-text-color);
+}
+
+.content-container .course-cards .card:nth-child(2) p:nth-child(1) {
+  color: var(--title-text-color);
+  font-weight: 200;
+}
+
+.content-container .course-cards .card:nth-child(2) p:nth-child(2) {
+  color: var(--title-text-color);
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.content-container .course-cards .card:nth-child(2) .course-status {
+  color: var(--title-text-color);
+  font-weight: 400;
+}
+
+.content-container .course-cards .card:nth-child(2) .card-navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--text-color);
+  width: 25px;
+  height: 45px;
+  border: 1px solid rgba(92, 89, 89, 0.45);
+  border-radius: 5px;
+  right: 5px;
+}
+
+.content-container .course-cards .card:nth-child(1) {
+  background: var(--complated-lesson-background);
+}
+
+.content-container .course-cards .card:nth-child(1) p:nth-child(1) {
+  color: #ffff;
+  font-weight: 200;
+}
+
+.content-container .course-cards .card:nth-child(1) p:nth-child(2) {
+  color: #ffff;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.content-container .course-cards .card:nth-child(1) .course-status {
+  color: #ffff;
+  font-weight: 400;
+}
+
+.content-container .daily-wrap {
+  margin-top: 25px;
+}
+
+.content-container .daily-wrap .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 185px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--complated-lesson-background);
+  top: 8px;
+  left: 35px;
+}
+
+.content-container .daily-wrap .daily-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--daily-icons-border-color);
+  border-radius: 10px;
+}
+
+.content-container .daily-wrap .daily-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 325px;
+  margin-left: 75px;
+  bottom: 10px;
+}
+
+.content-container .daily-wrap .title {
+  font-size: 24px;
+  color: var(--title-text-color);
+  font-weight: 400;
+}
+
+.content-container .reading-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 345px;
+  height: 125px;
+  -webkit-box-shadow: 4px 4px 9px 4px rgba(0, 0, 0, 0.185);
+          box-shadow: 4px 4px 9px 4px rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
+  padding-left: 15px;
+}
+
+.content-container .reading-card .daily-content-title {
+  color: var(--title-text-color);
+}
+
+.content-container .reading-card p {
+  color: var(--title-text-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.content-container .reading-card .tag-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-container .reading-card .tag-section .tag:nth-child(1) {
+  width: 90px;
+}
+
+.content-container .reading-card .tag-section .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--tag-text-color);
+  background: var(--disabled-daily-background);
+  margin-bottom: 15px;
+}
+
+.content-container .reading-card .tag-section .tag + .tag {
+  margin-left: 15px;
+}
+
+.content-container .reading-card .daily-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-container .reading-card .daily-navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--text-color);
+  width: 25px;
+  height: 45px;
+  border: 1px solid rgba(92, 89, 89, 0.45);
+  border-radius: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.content-container .movie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 345px;
+  height: 63px;
+  background: var(--disabled-daily-background);
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: not-allowed;
+}
+
+.content-container .essay-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 345px;
+  height: 63px;
+  background: var(--disabled-daily-background);
+  color: var(--text-color);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: not-allowed;
+}
+
+.routine-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 840px) {
+  .container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .container .sidebar {
+    position: relative;
+  }
+  .container .content-container {
+    position: relative;
+    left: -210px;
+  }
+  .container .content-container .course-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .content-container .card + .card {
+    margin-top: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
