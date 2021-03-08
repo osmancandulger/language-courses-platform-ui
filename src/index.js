@@ -9,4 +9,4 @@ listItem.forEach((e) => {
     e.classList.toggle("active");
   });
 });
-const listType = document.querySelectorAll("ul");
+const body = document.querySelectorAll("body");
