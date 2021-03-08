@@ -14,6 +14,8 @@
   --tag-text-color: #3e4561;
   --container-background-color: #fcfcfd;
   --daily-icons-border-color: #c2c2c2a1;
+  --font: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 * {
@@ -21,7 +23,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font);
 }
 
 body {
@@ -307,8 +309,16 @@ body {
 }
 
 .content-container .course-cards .card:nth-child(2) .course-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--title-text-color);
   font-weight: 400;
+  left: -5px;
 }
 
 .content-container .course-cards .card:nth-child(2) .card-navigator {
@@ -346,8 +356,16 @@ body {
 }
 
 .content-container .course-cards .card:nth-child(1) .course-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   color: #ffff;
   font-weight: 400;
+  left: -5px;
 }
 
 .content-container .daily-wrap {
@@ -580,5 +598,309 @@ body {
   .container .content-container .card + .card {
     margin-top: 15px;
   }
+}
+
+.profile-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 33%;
+}
+
+.profile-sidebar .user-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.profile-sidebar .user-area .bio-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+
+.profile-sidebar .user-area .bio-section .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: var(--cards-section-background);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.profile-sidebar .user-area .bio-section .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 45px;
+  width: 125px;
+  margin-left: 10px;
+}
+
+.profile-sidebar .user-area .bio-section .bio p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.profile-sidebar .user-area .bio-section .bio span {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.profile-sidebar .user-area .bio-section .bio .bio-navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: var(--disabled-daily-background);
+  border-radius: 50%;
+  color: var(--writing-section-background);
+  cursor: pointer;
+}
+
+.profile-sidebar .user-area .bio-section .settings-container {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+}
+
+.profile-sidebar .user-area .bio-section .settings-container .settings {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.profile-sidebar .user-area .bio-section .settings-container .notifications {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.profile-sidebar .categories-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 45px;
+}
+
+.profile-sidebar .categories-section .writing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 325px;
+  height: 165px;
+  background: var(--writing-section-background);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.profile-sidebar .categories-section .writing .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 25px 25px;
+}
+
+.profile-sidebar .categories-section .writing h6 {
+  font-size: 25px;
+  color: #ffff;
+  font-weight: 700;
+}
+
+.profile-sidebar .categories-section .writing span {
+  font-size: 14px;
+  color: #ffff;
+  font-weight: 200;
+}
+
+.profile-sidebar .categories-section .categories-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  width: 318px;
+  height: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile-sidebar .categories-section .categories-wrap .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  bottom: 5px;
+  left: 15px;
+}
+
+.profile-sidebar .categories-section .listening {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 160px;
+  height: 125px;
+  border: 2px solid #dbdada;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.profile-sidebar .categories-section .listening h6 {
+  font-size: 25px;
+  color: var(--writing-section-background);
+  font-weight: 800;
+}
+
+.profile-sidebar .categories-section .listening span {
+  font-size: 14px;
+  color: var(--writing-section-background);
+  font-weight: 400;
+}
+
+.profile-sidebar .categories-section .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 120px;
+  height: 125px;
+  background: var(--background);
+  border-radius: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.profile-sidebar .categories-section .cards h6 {
+  font-size: 25px;
+  color: var(--writing-section-background);
+  font-weight: 800;
+}
+
+.profile-sidebar .categories-section .cards span {
+  font-size: 14px;
+  color: var(--writing-section-background);
+  font-weight: 400;
+}
+
+.profile-sidebar .categories-section .speaking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 160px;
+  height: 125px;
+  background: var(--speaking-section-background);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.profile-sidebar .categories-section .speaking h6 {
+  font-size: 25px;
+  color: var(--writing-section-background);
+  font-weight: 800;
+}
+
+.profile-sidebar .categories-section .speaking span {
+  font-size: 14px;
+  color: var(--writing-section-background);
+  font-weight: 400;
+}
+
+.profile-sidebar .categories-section .see-more {
+  width: 140px;
+  height: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile-sidebar .categories-section .see-more p {
+  border-bottom: 3px solid var(--background);
+  cursor: pointer;
+}
+
+.progress-icon {
+  position: relative;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 /*# sourceMappingURL=style.css.map */
